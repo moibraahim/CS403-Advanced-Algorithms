@@ -5,14 +5,14 @@ using namespace std;
 
 
 // Greates common diviosr of max elemnt and min element using brute force
-int findGCD(vector<int>& nums) {
-    int min = *min_element(nums.begin(), nums.end());
-    int max = *max_element(nums.begin(), nums.end());
-    int maxGCD = INT_MIN;
+int findGCD(int a , int b) {
+    int mininum = min(a,b);
+    int maximum = max(a,b);
+    int maxGCD = INT_MIN; // Smallest Value int can handle ( Similar to int max = -999999 )
 
-    for (int i = 1; i <= max; i++)
+    for (int i = 1; i <= maximum; i++)
     {
-        if (max % i == 0 && min % i == 0)
+        if (maximum % i == 0 && mininum % i == 0)
         {
             if (i > maxGCD)
             {
@@ -20,10 +20,7 @@ int findGCD(vector<int>& nums) {
             }
         }
     }
-    if (maxGCD == INT_MIN)
-    {
-        return 0;
-    }
+   
     return maxGCD;
 
 
@@ -33,7 +30,7 @@ int findGCD(vector<int>& nums) {
 
 int main()
 {
-    vector<int>nums = {0,0};
-    cout << findGCD(nums) << endl;
+    
+    cout << findGCD(60,24) << endl;
 
 }
