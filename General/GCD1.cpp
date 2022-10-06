@@ -31,6 +31,6 @@ int findGCD(int a , int b) {
 int main()
 {
     
-    cout << findGCD(60,24) << endl;
+    cout << findGCD(35,15) << endl;
 
 }
