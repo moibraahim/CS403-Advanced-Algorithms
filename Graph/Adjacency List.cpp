@@ -37,7 +37,7 @@ void add_edge(vector<int> adjlist[], int n1, int n2)
 // Undirected graph representation using adjacency list
 int main()
 {
-    int vertex = 6; // Number of nodes
+    //int vertex = 6; // Number of nodes
     vector<int> adjlist[6];
     add_edge(adjlist, 0, 4);
     add_edge(adjlist, 0, 3);
